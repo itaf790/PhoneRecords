@@ -8,6 +8,7 @@ public class uploadinfo {
          public String imageStorage;
          public String imageSpecification;
          public String imageURL;
+
     public uploadinfo() { }
 
         public uploadinfo(String name,String price,String storage,String specification, String url) {

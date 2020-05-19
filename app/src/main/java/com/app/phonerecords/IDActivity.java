@@ -18,7 +18,7 @@ public class IDActivity extends AppCompatActivity {
         setContentView(R.layout.activity_i_d);
 
         Next = findViewById(R.id.btnID);
-        TextID=findViewById(R.id.textid);
+       TextID=findViewById(R.id.textid);
 
 
         Next.setOnClickListener(new View.OnClickListener() {

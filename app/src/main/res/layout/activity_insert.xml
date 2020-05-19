@@ -37,7 +37,8 @@
         app:layout_constraintBottom_toTopOf="@+id/Insert"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Storage" />
+        app:layout_constraintTop_toBottomOf="@+id/Storage"
+        android:textSize="14dp"/>
 
     <Button
         android:id="@+id/Choose"
@@ -46,11 +47,12 @@
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginBottom="64dp"
-        android:background="@drawable/button1"
+        android:background="@drawable/button2"
         android:text="Choose Image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Insert" />
+        app:layout_constraintStart_toEndOf="@+id/Insert"
+        android:textSize="14dp"/>
 
     <EditText
         android:id="@+id/Storage"
@@ -67,7 +69,8 @@
         app:layout_constraintBottom_toTopOf="@+id/Specification"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Price" />
+        app:layout_constraintTop_toBottomOf="@+id/Price"
+        android:textSize="14dp"/>
 
     <Button
         android:id="@+id/Insert"
@@ -76,12 +79,13 @@
         android:layout_marginEnd="19dp"
         android:layout_marginRight="19dp"
         android:layout_marginBottom="64dp"
-        android:background="@drawable/button1"
+        android:background="@drawable/button2"
         android:text="Insert Data"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Choose"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Specification" />
+        app:layout_constraintTop_toBottomOf="@+id/Specification"
+        android:textSize="14dp"/>
 
     <EditText
         android:id="@+id/Price"
@@ -98,7 +102,8 @@
         app:layout_constraintBottom_toTopOf="@+id/Storage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Name" />
+        app:layout_constraintTop_toBottomOf="@+id/Name"
+        android:textSize="14dp"/>
 
     <TextView
         android:id="@+id/textview"
@@ -109,13 +114,14 @@
         android:gravity="center"
         android:text="Insert Mobile Record"
         android:textAllCaps="false"
-        android:textColor="#3747A2"
+        android:textColor="#009688"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <ImageView
         android:id="@+id/imageView"
@@ -126,7 +132,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview"
-        app:srcCompat="@drawable/ic_launcher_background"
-         />
+
+        tools:srcCompat="@drawable/ic_launcher_background" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,8 +38,9 @@ public class ImageListAdapter extends ArrayAdapter<uploadinfo> {
         String TempImageSpecification = Objects.requireNonNull(getItem(position)).getImageSpecification();
         String imageName = Objects.requireNonNull(getItem(position)).getImageName();
         String imageUrl = Objects.requireNonNull(getItem(position)).getImageURL();
+
         //Create the employee object with the information
-        uploadinfo ImageInfo = new uploadinfo(imageName,TempImagePrice,TempImageStorage,TempImageSpecification,imageUrl);
+        uploadinfo ImageInfo = new uploadinfo(imageName,TempImagePrice,TempImageStorage ,TempImageSpecification,imageUrl);
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(this.mResource, parent,false);
         TextView imgName = convertView.findViewById(R.id.image_name);

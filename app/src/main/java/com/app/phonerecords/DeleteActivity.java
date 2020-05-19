@@ -17,32 +17,33 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class DeleteActivity extends AppCompatActivity {
-Button buttonDelete;
-EditText TextID;
-    String value="";
+    Button buttonDelete;
+    EditText TextID;
+    String value = "";
     ProgressDialog progressDialog;
     DatabaseReference databaseReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete);
 
-        buttonDelete=findViewById(R.id.btnDelete);
-        TextID=findViewById(R.id.DeleteID);
-         value = (String)TextID.getText().toString();
+        buttonDelete = findViewById(R.id.btnDelete);
+        TextID = findViewById(R.id.DeleteID);
+        value = (String) TextID.getText().toString();
         databaseReference =
                 FirebaseDatabase.getInstance().getReference(InsertActivity.Database_Path);
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot snapshot) {
-                for (DataSnapshot postSnapshot : snapshot.getChildren()) {
+      databaseReference.addValueEventListener(new ValueEventListener() {
+          @Override
+          public void onDataChange(DataSnapshot snapshot) {
+              for (DataSnapshot postSnapshot : snapshot.getChildren()) {
 
 
-                    buttonDelete.setOnClickListener(new View.OnClickListener() {
+                  buttonDelete.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             databaseReference =
-                                    FirebaseDatabase.getInstance().getReference(InsertActivity.Database_Path).child(value);
+                                    FirebaseDatabase.getInstance().getReference(InsertActivity.Database_Path).child("value");
                         databaseReference.removeValue();
 
                             Toast.makeText(getApplicationContext(),
@@ -71,3 +72,6 @@ EditText TextID;
 
     }
 }
+
+
+
